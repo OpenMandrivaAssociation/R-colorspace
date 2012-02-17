@@ -22,6 +22,8 @@ BuildRequires:    R-KernSmooth R-MASS R-kernlab R-mvtnorm
 %else
 BuildRequires:    R-KernSmooth R-MASS R-kernlab R-mvtnorm R-vcd 
 %endif
+BuildRequires:    blas-devel
+BuildRequires:    lapack-devel
 %rename R-cran-colorspace
 
 %description
