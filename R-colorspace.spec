@@ -1,10 +1,10 @@
-%bcond_without bootstrap
+%bcond_with bootstrap
 %global packname  colorspace
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
 Version:          1.1_1
-Release:          1
+Release:          2
 Summary:          Color Space Manipulation
 Group:            Sciences/Mathematics
 License:          BSD
