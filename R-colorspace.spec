@@ -44,7 +44,9 @@ rm -f %{buildroot}%{rlibdir}/R.css
 
 %if %{without bootstrap}
 %check
-%{_bindir}/R CMD check %{packname}
+if [ x$DISPLAY != x ];	then %{_bindir}/R CMD check %{packname}
+else			true
+fi
 %endif
 
 %files
