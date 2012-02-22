@@ -10,17 +10,14 @@ Group:            Sciences/Mathematics
 License:          BSD
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_1.1-1.tar.gz
-Requires:         R-methods 
-%if %{with bootstrap}
-Requires:         R-KernSmooth R-MASS R-kernlab R-mvtnorm
-%else
-Requires:         R-KernSmooth R-MASS R-kernlab R-mvtnorm R-vcd 
+Requires:         R-methods R-KernSmooth R-MASS R-kernlab R-mvtnorm
+%if %{without bootstrap}
+Requires:         R-vcd
 %endif
 BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-methods
-%if %{with bootstrap}
 BuildRequires:    R-KernSmooth R-MASS R-kernlab R-mvtnorm
-%else
-BuildRequires:    R-KernSmooth R-MASS R-kernlab R-mvtnorm R-vcd 
+%if %{without bootstrap}
+BuildRequires:    R-vcd
 %endif
 BuildRequires:    blas-devel
 BuildRequires:    lapack-devel
