@@ -3,13 +3,13 @@
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
-Version:          1.1_1
-Release:          3
+Version:          1.2.1
+Release:          1
 Summary:          Color Space Manipulation
 Group:            Sciences/Mathematics
 License:          BSD
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_1.1-1.tar.gz
+Source0:          http://cran.r-project.org/src/contrib/colorspace_1.2-1.tar.gz
 Requires:         R-methods 
 %if %{with bootstrap}
 Requires:         R-KernSmooth R-MASS R-kernlab R-mvtnorm
@@ -62,6 +62,7 @@ fi
 %{rlibdir}/%{packname}/R
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/libs
+%{rlibdir}/%{packname}/data
 
 
 %changelog
@@ -77,4 +78,5 @@ fi
 * Tue Dec 29 2009 Jérôme Brenier <incubusss@mandriva.org> 1.0.1-1mdv2010.1
 + Revision: 483321
 - import R-cran-colorspace
+
 
