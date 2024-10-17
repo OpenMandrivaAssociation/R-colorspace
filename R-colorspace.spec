@@ -8,7 +8,7 @@ Release:          2
 Summary:          Color Space Manipulation
 Group:            Sciences/Mathematics
 License:          BSD
-URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
+URL:              https://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/colorspace_1.2-1.tar.gz
 Requires:         R-methods 
 %if %{with bootstrap}
